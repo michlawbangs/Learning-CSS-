@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Style</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Centering the body
+        document.body.style.textAlign ='center'
+        // Create Elements
+        let h1Element = document.createElement('h1')
+        let pElement = document.createElement('p')
+        // Adding text content to the element created
+        h1Element.textContent = 'Hello World!'
+        pElement.textContent = 'I Love CSS'
+        // Adding Styles to the elements
+        h1Element.style.textDecoration = 'underline'
+        pElement.style.fontSize = '25px'
+        // Append the following elements into the document
+        document.body.appendChild(h1Element)
+        document.body.appendChild(pElement)
+    </script>
+</body>
+</html>
