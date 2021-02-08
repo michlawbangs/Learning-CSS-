@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Selectors</title>
+    
+    <!-- style -->
+    <style>
+        /* Multiple selector seperated by comma */
+        div, p{
+            color: blue;
+        }
+        /* Multiple selector no comma */
+        div p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Multiple Selectors
+        When you apply the same style to a group of css selector  targeting several element. Use comma to seperate css selectors, without comma in this case the style will only apply to p
+    -->
+    <div>
+        <p>Hello world!</p>
+    </div>
+</body>
+</html>
