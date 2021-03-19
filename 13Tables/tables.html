@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <!-- Styles -->
+    <style>
+        table{
+            /* width: 100px; */
+            /* table-layout: fixed; */
+            table-layout: auto;
+            border-collapse: collapse;
+            background-color: #eeeeee;
+            border-radius: 5px;
+            width: 500px;
+            margin: 20px auto;
+            caption-side: bottom;
+        }
+        caption{
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: #18768d;
+            padding: 10px 0;
+        }
+        thead tr th{
+            background-color: #1ba6c8;
+            color: white;
+            padding: 10px;
+            font-size: 1.5em;
+            text-align: left;
+        }
+
+        tbody tr td{
+            padding: 15px 10px;
+            font-size: 1.15rem;
+        }
+
+        tr:nth-child(even){
+            background-color: #b1d3d3;
+            border-left: 2px solid black;
+        }
+
+        tbody tr:last-of-type{
+            border-bottom: 2px solid #3ca0a0;
+        }
+        
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Family Members</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Occupation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Michael W. Bangura</td>
+                <td>60 Years</td>
+                <td>Pastor/Teacher</td>
+            </tr>
+
+            <tr>
+                <td>Florence Bangura</td>
+                <td>52 Years</td>
+                <td>Teacher</td>
+            </tr>
+
+            <tr>
+                <td>Michaella T. Bangura</td>
+                <td>32 Years</td>
+                <td>Social Worker</td>
+            </tr>
+
+            <tr>
+                <td>Michael L. Bangura</td>
+                <td>22 Years</td>
+                <td>Software Engineer</td>
+            </tr>
+            
+            <tr>
+                <td>Florah A. Bangura</td>
+                <td>16 Years</td>
+                <td>Pupil</td>
+            </tr>
+           
+        </tbody>
+        
+    </table>
+</body>
+</html>

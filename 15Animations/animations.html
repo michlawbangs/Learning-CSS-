@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <!-- Styles -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* @keyframes rainbow-background{
+                 0%     { background-color: #ff0000; }     
+             8.333%     { background-color: #ff8000; }    
+            16.667%     { background-color: #ffff00; }    
+            25.000%     { background-color: #80ff00; }    
+            33.333%     { background-color: #00ff00; }    
+            41.667%     { background-color: #00ff80; }    
+            50.000%     { background-color: #00ffff; }    
+            58.333%     { background-color: #0080ff; }    
+            66.667%     { background-color: #0000ff; }    
+            75.000%     { background-color: #8000ff; }    
+            83.333%     { background-color: #ff00ff; }    
+            91.667%     { background-color: #ff0080; }    
+            100.00%     { background-color: #ff0000; } 
+        }
+
+        .rainbowBackground{
+            animation: rainbow-background 3s infinite;
+            width: 80%;
+            height: 50vh;
+            margin: 20px auto;
+        }
+
+        .rotate{
+            background-color: #4cdada;
+            width: 100px;
+            padding: 50px 0;
+            margin: 20px auto;
+            border-radius: 50px;
+            text-align: center;
+            line-height: 0;
+            color: white;
+            cursor: pointer;
+            transition: background-color 1s, transform 1s 1s linear ;
+        }
+
+        .rotate:hover{
+            background-color: teal;
+            transform: rotate(360deg);
+        }
+
+        .sky{
+            width: 100%;
+            height: 45vh;
+            background: skyblue;
+        }
+
+        .grass{
+            width: 100%;
+            height: 30vh;
+            background: green;
+        }
+
+        .road{
+            width: 100%;
+            height: 45vh;
+            background: #535553;
+            border-top: 5px solid #8a8a8a;
+            border-bottom: 5px solid #8a8a8a;
+            position: relative;
+        }
+
+        .lines{
+            position: absolute;
+            top: 45%;
+            width: 100%;
+            height: 0px;
+            border: 5px dashed #d8d8d8 ;
+        }
+        /* Element to animate */
+        /* .woman{
+            width: 90px;
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            animation-name: walk;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+        }
+
+        .man{
+            width: 90px;
+            position: absolute;
+            top: 140px;
+            left: 0px;
+            animation-name: walk;
+            animation-timing-function: linear;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+            animation-fill-mode: both;
+            
+        } */
+
+        /* Keyframes */
+        /* @keyframes walk{
+            from{
+                transform: translateX(-200);
+            }
+            to{
+                transform: translateX(1500px);
+            }
+        } */
+
+
+        
+        header{
+            background-image: url(../sponsor.jpeg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        #header-text{
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -30%);
+        }
+
+        .brand{
+            text-transform: capitalize;
+        }
+
+        h2{
+            font-size: 2.7rem;
+            font-weight: 500;
+            margin: 0;
+            opacity: 0;
+            animation: moveDown 0.8s linear forwards;
+        }
+
+        p{
+            font-size: 2.7rem;
+            font-weight: bold;
+            margin: 0;
+            color: #0d2f42;
+            opacity: 0;
+            animation: appear 1s 1.3s linear forwards;
+        }
+
+        .overlay{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #000000;
+            opacity: 0.2;
+        }
+
+        .btns{
+            margin: 10px 0;
+        }
+        .btn{
+            padding: 5px 15px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: capitalize;
+            background-color: #ace791;
+            border: 0;
+            border-radius: 3px;
+        }
+        
+        .donate{
+            margin-right: 10px;
+            animation: animateBtn 1s 2s linear backwards;
+        }
+
+        .sponsor{
+            animation: animateBtn 1s 2.5s linear backwards;
+        }
+
+        /* Keyframes */
+        @keyframes moveDown{
+            0%{
+                transform: translateY(-80px);
+                opacity: 0;
+            }
+
+            100%{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes appear{
+            0%{
+                opacity: 0;
+            }
+
+            100%{
+                opacity: 1;
+            }
+        }
+
+        @keyframes animateBtn{
+            0%{
+                opacity: 0;
+            }
+
+            100%{
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="header-text">
+            <div class="brand">
+                <h2>Be a part </h2>
+                <p>in someone's development</p>
+            </div>
+            <div class="btns">
+                <button class="btn donate">Donate</button>
+                <button class="btn sponsor">Sponsor</button>
+            </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="moveup"></div>
+    </header>
+
+    <!-- <div class="rainbowBackground"></div>
+    <div class="rotate">Hover Me</div>
+
+    <div class="sky"></div>
+    <div class="grass"></div>
+    <div class="road">
+        <div class="lines"></div>
+        <img src="../3.png" alt="" class="woman">
+        <img src="../2.png" alt="" class="man">
+    </div> -->
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <!-- Styles -->
+    <style>
+         div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+            background-color: red;
+            transition-property: height, width;
+            transition-duration: 1s, 500ms;
+            transition-timing-function: linear;
+            transition-delay: 0s 1s;
+        }
+        div:hover{
+            background-color: green;
+            width: 150px;
+            height: 150px; 
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h3>Transitions</h3>
+    <div></div>
+</body>
+</html>

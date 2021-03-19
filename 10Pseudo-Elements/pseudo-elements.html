@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Elements</title>
+    <!-- Styles -->
+    <style>
+        ul{
+            list-style: none;
+            font-size: 1.5em;
+            
+        }
+        
+        /* li{
+            display: inline-block;
+            border: 1px solid red;
+        } */
+
+        /* li::before{
+            content: "A";
+        }
+
+        li::first-letter{
+            content: '';
+            margin: 0 20px 0 0;
+        } */
+
+        li::before{
+            content: "";
+            height: 20px;
+            width: 20px;
+            background: linear-gradient(to top, red, blue);
+            margin-right: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Lists -->
+    <div class="lists">
+        <ul>
+            <li>List1</li>
+            <li>List2</li>
+            <li>List3</li>
+        </ul>
+    </div>
+    
+</body>
+</html>

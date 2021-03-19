@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+
+    <!-- Style -->
+    <!-- 
+        Psudo-class are keywords which allow selection based on information that lies outside of the document tree or that cannot be expresses by other selectors or combinators. Eg includes whether or not a link has been followed(:visited), the mouse is over an element(:hover) etc.
+        SYNTAX:
+                selector:pseudo-class{
+                    property: value
+                }
+        Lists Of Most Pseudo-classes
+    -->
+    <style>
+        /* first-child || first-of-type */
+        p:first-child {  
+            background: #0421ff; 
+        } 
+
+        h1:first-of-type {  
+            background: #91994e; 
+        }
+
+        h2:first-of-type {  
+            background: #9caa1f; 
+        }
+        
+        /* last-child || last-of-type */
+        p:last-of-type{  
+            background: #3643a3; 
+        }  
+
+        h1:last-of-type {  
+            background: #e2fa0c; 
+        }
+
+        ul li{
+            list-style: none;
+            font-size: 2rem;
+        }
+
+        ul li:first-child{
+            color: red;
+        }
+
+        /* ul li:first-of-type{
+            color: #b92626;
+        } */
+
+        /* ul li:last-child{
+            color: red;
+        } */
+
+        /* ul li:nth-child(3){
+            color: #0890b3;
+        } */
+
+        /* ul li:nth-child(even){
+            color: #0890b3;
+        } */
+
+        /* ul li:nth-child(odd){
+            color: #0890b3;
+        } */
+
+        /* ul li:nth-child(3n+1){
+            color: #0890b3;
+        } */
+        
+        
+    </style>
+</head>
+<body>
+
+     <!-- <div class="container">    
+         <p>First paragraph</p>    
+         <p>Second paragraph</p>    
+         <p>Last paragraph</p>    
+         <h1>First Heading 1</h1>    
+         <h1>Last Heading 1</h1>    
+         <h2>First heading 2</h2>    
+         <h2>Last heading 2</h2> 
+    </div> -->
+
+    <ul>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Forth</li>
+    </ul>
+
+</body>
+</html>

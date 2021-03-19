@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors: Combinators</title>
+
+    <!-- Style -->
+    <style>
+        /* Descendant  Combinator*/
+        /* div p{
+            color: red;
+        }   */
+        /* All the <p>s color changes because they are descendant to the <div> */
+
+        /* Child Combinator */
+        /* div > p{
+            color: red;
+        } */
+        /* Only the first <p> color changes because it is the only direct child to the <div>, the other <p> is not a direct child to the <div> but to the <section> */
+
+        /* Adjancent Sibling Combinator */
+        /* p + p{
+            color: red;
+        } */
+        /* Select the two <p>s after the first <p>, the last <p> is not selected because is not adjancent to <p> but it is adjancent to <hr> and if there is another <p> after the first <p> to <hr> the color is applied to it and not the first <p> to <hr> because the second <p> is adjancent to the first <p> */
+
+        /* General Sibling Combinators */
+        p ~ p{
+            color: red;
+        }
+        /* Selects all <p> elements that are proceded by another <p> element, whether or not they are immediately adjacent */
+    </style>
+</head>
+<body>
+    <!-- 
+        Descendant Combinator: selector selector 
+        - This combinator selects ALL decendants of the element(from the child element on down)
+    -->
+    <!-- <div>
+        <p>My text is red</p>
+        <section>
+            <p>My text is red</p>
+        </section>
+    </div>
+    <p>My text is NOT red</p> -->
+
+    <!-- 
+        Child Combinator: selector > selector
+        - Selects element that are children, or direct descendants, of the element specified.
+     -->
+    <!-- <div>
+        <p>My text is red</p>
+        <section>
+            <p>My text is red</p>
+        </section>
+    </div> -->
+
+    <!-- 
+        Adjancent Sibling Combinator: selector + selector
+        - Selects a sibling element that immediately follows a specified element
+     -->
+     <!-- <p>My text is NOT red</p>
+     <p>My text is red</p>
+     <p>My text is red</p>
+     <hr>
+     <p>My text is NOT red</p> -->
+     <!-- <p>My text is NOT red</p> -->
+
+     <!-- 
+        General Sibling Combinators: selector ~ selector
+        - Selects ALL sibling that follow the specified element
+    -->
+    <p>My text is NOT red</p>
+    <p>My text is red</p>
+    <p>My text is red</p>
+    <hr>
+    <h1>And now a title</h1>
+    <p>My text is NOT red</p>
+</body>
+</html>
